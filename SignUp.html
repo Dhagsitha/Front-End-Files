@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/ece8a5f45f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="container">
+        <h1 style="text-align: center; color: white; font-family: cursive; padding-top: 30px; font-size: 34px;">THE HI-STYLE FURNITURE</h1>
+        <div class="SignupBox" id="signupbox">
+            <h1 id="title">Sign Up</h1>
+            <form action="webpage.html" method="get">
+                <div class="input-group" id="inputGrp">
+                    <div class="input-field" id="nameField">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" name="userName" id="userName" placeholder="Name">
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" name="email" id="email" placeholder="Email">
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="pwd" id="pwd" placeholder="Password">
+                    </div>
+                </div>
+                <div class="btn-field">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                    <button type="submit" id="signupBtn">Sign up</button>
+                </div>
+                <br>
+                <p id="para">Already have an Account?<a href="#" id="loginLink"> LogIn</a></p>
+            </form>
+        </div>
+    </section>
+    <script>
+        document.getElementById("loginLink").onclick = function () {
+            document.getElementById("nameField").style.display = "none";
+            document.getElementById("title").innerHTML = "Log In";
+            document.getElementById("signupBtn").innerHTML = "Login";
+            document.getElementById("para").innerHTML = 'Forgot Your Password?<a href="#">Click here</a>';
+            document.getElementById("signupbox").style.height = "400px";  
+            document.getElementById("inputGrp").style.height= "150px";     
+        };
+    </script>
+</body>
+</html>
